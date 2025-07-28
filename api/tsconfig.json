@@ -7,5 +7,5 @@
     "skipLibCheck": true,
     "outDir": "./"
   },
-  "include": ["**/*.ts"]
+  "files": ["dump/index.ts"]
 }
