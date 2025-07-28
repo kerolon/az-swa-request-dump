@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>API Request Inspector</title>
+</head>
+<body>
+  <h1>API Request Inspector</h1>
+
+  <label for="token">Authorization: Bearer &nbsp;</label>
+  <input type="text" id="token" size="80" placeholder="(Optional) Enter token" />
+  <button onclick="callApi()">Call API</button>
+
+  <pre id="output"></pre>
+
+  <script>
+    async function callApi() {
+      const token = document.getElementById("token").value.trim();
+      const headers = token ? { Authorization: `Bearer ${token}` } : {};
+
+      const response = await fetch("/api/dump", { method: "GET", headers });
+      const text = await response.text();
+      document.getElementById("output").textContent =
+        `Status: ${response.status}\n\n${text}`;
+    }
+  </script>
+</body>
+</html>
