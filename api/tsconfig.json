@@ -7,5 +7,5 @@
     "skipLibCheck": true,
     "outDir": "./"
   },
-  "include": ["./**/*.ts"]
+  "include": ["**/*.ts"]
 }
