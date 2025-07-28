@@ -8,5 +8,6 @@
     "rootDir":".",
     "outDir": "./"
   },
-  "files": ["dump/index.ts"]
+ "include": ["**/*.ts"],
+ "exclude": []
 }
