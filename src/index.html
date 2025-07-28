@@ -13,11 +13,13 @@
 
   <pre id="output"></pre>
 
-  <script>
+  <script>  
     async function callApi() {
       const token = document.getElementById("token").value.trim();
       const headers = token ? { Authorization: `Bearer ${token}` } : {};
-
+      if(token){
+        headers["X-Authorization"] = `Bearer ${token}`
+      }
       const response = await fetch("/api/dump", { method: "GET", headers });
       const text = await response.text();
       document.getElementById("output").textContent =
