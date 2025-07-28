@@ -7,7 +7,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc"
+    "build": "tsc && npx azure-functions-pack pack ."
   },
   "keywords": [],
   "author": "",
@@ -16,5 +16,8 @@
     "@azure/functions": "^4.6.0",
     "npm": "^11.5.1",
     "typescript": "^5.8.3"
+  },
+  "devDependencies": {
+    "azure-functions-pack": "^1.0.0"
   }
 }
