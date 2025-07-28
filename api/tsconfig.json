@@ -5,6 +5,7 @@
     "moduleResolution": "Node",
     "esModuleInterop": true,
     "skipLibCheck": true,
+    "rootDir":".",
     "outDir": "./"
   },
   "files": ["dump/index.ts"]
